@@ -1,3 +1,28 @@
+'use client'
+
+import { useEffect } from 'react'
+import SearchMoviesClient from './SearchMoviesClient';
+
+
+
 export default function Page() {
-  return <h1>Hello, World!!!!!!!!!!!??????????????!</h1>
+
+  useEffect(()=>{
+    console.log('in useeffec');
+  })
+  
+  return (
+<div className ="container">
+    <h1 className="title">
+    Search Moives
+    </h1>
+    <SearchMoviesClient></SearchMoviesClient>
+  
+</div>
+
+
+
+
+    )
+
 }

@@ -2,26 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+  /* page */
+  .container {
+    margin: 0 auto;
+    max-width:1000px;
+    padding: 100px;
+  }
+  
+.title {
+  font-size: 4.4rem;
+  text-align: center;
+  padding: 50px;
+}
+/* page */
+
+
+
+/* searchMovie */
+
+
+
+.button{
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0,0,0,0.75);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 250ms; 
+    margin-top: 2rem;
+    
+}
+.button:hover{
+  background-color:rgba(31, 30, 30, 0.75);
+  border: 1px soild rgba(31, 30, 30, 0.75);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+
+
+@media (min-width:786px){
+  .form {
+      grid-template-columns: auto 1fr auto;
+      grid-gap: 1rem;
+      align-items: center;
+  }
+  
+  .input {
+      margin-bottom: 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* searchMovieClient */
+.card-list{
+  margin-top: 50px;
+  flex-direction: column;
+  
 }
+.card{
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(241, 236, 236, 0.25);
+  background-color: rgba(241, 236, 236, 0.25);
+  margin-bottom: 2rem;
+}
+.card--image{
+  margin: 0 auto;
+  display: block;
+  height: '100vh';
+  border-radius: 0.8rem;
+  padding-bottom: 10px;
+
+}
+.card--title{
+  text-align: center;
+  font-size: 2rem;
+  font-style: bold;
+  margin-bottom: 5px;
+}
+.card--desc{
+  margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
